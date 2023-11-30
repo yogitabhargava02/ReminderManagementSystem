@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const EnableReminder = () => {
-  const [subjects, setSubjects] = useState([]); // Populate subjects based on your API
-  const [reminders, setReminders] = useState([]); // Populate reminders based on your API
+  const [subjects, setSubjects] = useState([]); 
+  const [reminders, setReminders] = useState([]); 
   const [formValues, setFormValues] = useState({
-    date: '', // Add date state
+    date: '', 
     subject: '',
     reminderId: '',
     description: '',

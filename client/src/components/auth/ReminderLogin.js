@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 const ReminderLogin = () => {
@@ -108,9 +108,9 @@ const ReminderLogin = () => {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not a member?{' '}
-            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Sign up for a Reminder System account
-            </a>
+            <Link to="/register" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+            Sign Up
+          </Link>
           </p>
         </div>
       </div>

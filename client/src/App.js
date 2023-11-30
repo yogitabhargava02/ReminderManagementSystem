@@ -19,9 +19,10 @@ function App() {
       <div className="App">
       <Navbar/>
         <Routes>
+        <Route path="/" element={<ReminderLogin />} />
           <Route path="/login" element={<ReminderLogin />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/home/register" element={<ReminderRegister />} />
+          <Route path="/register" element={<ReminderRegister />} />
           <Route path="/home/set-reminder" element={<SetReminder />} />
           <Route path="/home/modify-reminder" element={<ModifyReminder />} />
           <Route path="/home/disable-reminder" element={<DisableReminder />} />
