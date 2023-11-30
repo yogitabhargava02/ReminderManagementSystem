@@ -58,15 +58,39 @@ const reminderController = {
 
   viewReminders: async (req, res) => {
     try {
-      // Implement logic to filter and retrieve reminders based on criteria (date, subject, etc.)
-      // This will depend on your specific requirements.
-      const reminders = await Reminder.find();
+      const userId = req.query.userId;
+      const fromDate = req.query.fromDate;
+      const toDate = req.query.toDate;
+      const subject = req.query.subject;
+  
+      // Construct the filter object based on the provided parameters
+      const filter = { user: userId };
+  
+      if (fromDate) {
+        filter.date = { $gte: new Date(fromDate) };
+      }
+  
+      if (toDate) {
+        // Assuming toDate should be inclusive, so we add one day to include reminders on toDate
+        const toDateFilter = new Date(toDate);
+        toDateFilter.setDate(toDateFilter.getDate() + 1);
+        filter.date = { ...filter.date, $lt: toDateFilter };
+      }
+  
+      if (subject) {
+        filter.subject = subject;
+      }
+  
+      // Fetch reminders based on the constructed filter
+      const reminders = await Reminder.find(filter);
+  
       res.status(200).json(reminders);
     } catch (error) {
       console.error(error);
       res.status(500).json({ message: 'Internal Server Error' });
     }
   },
+
 };
 
 module.exports = reminderController;

@@ -11,11 +11,13 @@ import DeleteReminder from './components/deleteReminder';
 import EnableReminder from './components/enableReminder';
 import ViewReminders from './components/viewReminders';
 import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <Router>
       <div className="App">
+      <Navbar/>
         <Routes>
           <Route path="/login" element={<ReminderLogin />} />
           <Route path="/home" element={<Home />} />

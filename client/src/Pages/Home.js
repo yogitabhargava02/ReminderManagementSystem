@@ -56,7 +56,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-500 to-indigo-500 min-h-screen flex items-center justify-center text-white">
+    <div className="bg-pink min-h-screen flex items-center justify-center text-white">
       {isLoggedIn ? (
         <div className="bg-gray-100 p-8 rounded-lg shadow-md w-96 text-gray-800">
           <h1 className="text-3xl font-bold mb-4">Welcome, {username}!</h1>
@@ -81,9 +81,7 @@ const Home = () => {
               Enable Reminder
             </button>
           </div>
-          <button onClick={handleLogout} className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 mt-4">
-            Logout
-          </button>
+          
         </div>
       ) : (
         <div>
