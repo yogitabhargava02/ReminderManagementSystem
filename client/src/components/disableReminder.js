@@ -90,7 +90,8 @@ const DisableReminder = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-8">Disable Reminder</h1>
+      <div className="max-w-md mx-auto bg-white p-8 border border-gray-300 rounded-md mt-10">
+        <h1 className="text-3xl font-bold mb-8">Disable Reminder</h1>
 
       <form>
         <div className="mb-4">
@@ -156,6 +157,7 @@ const DisableReminder = () => {
           </button>
         </div>
       </form>
+      </div>
     </div>
   );
 };

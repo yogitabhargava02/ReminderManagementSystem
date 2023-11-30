@@ -21,13 +21,13 @@ function App() {
         <Routes>
           <Route path="/login" element={<ReminderLogin />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/register" element={<ReminderRegister />} />
-          <Route path="/set-reminder" element={<SetReminder />} />
-          <Route path="/modify-reminder" element={<ModifyReminder />} />
-          <Route path="/disable-reminder" element={<DisableReminder />} />
-          <Route path="/delete-reminder" element={<DeleteReminder />} />
-          <Route path="/enable-reminder" element={<EnableReminder />} />
-          <Route path="/view-reminders" element={<ViewReminders />} />
+          <Route path="/home/register" element={<ReminderRegister />} />
+          <Route path="/home/set-reminder" element={<SetReminder />} />
+          <Route path="/home/modify-reminder" element={<ModifyReminder />} />
+          <Route path="/home/disable-reminder" element={<DisableReminder />} />
+          <Route path="/home/delete-reminder" element={<DeleteReminder />} />
+          <Route path="/home/enable-reminder" element={<EnableReminder />} />
+          <Route path="/home/view-reminders" element={<ViewReminders />} />
         </Routes>
       </div>
     </Router>
