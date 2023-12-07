@@ -29,12 +29,8 @@ const reminderSchema = new mongoose.Schema({
       days3: Boolean,
       days2: Boolean,
     },
-  },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Customer',
-    required: true,
-  },
+  }
+ 
 }, { collection: 'reminder' });
 
 module.exports = mongoose.model('Reminder', reminderSchema);

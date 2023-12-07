@@ -48,7 +48,7 @@ const SetReminder = () => {
 
         // Redirect to the View route after a delay
         setTimeout(() => {
-          navigate('/view');
+          navigate('/home/view-reminders');
         }, 2000);
       } else {
         // Display an error toast
